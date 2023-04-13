@@ -1,0 +1,23 @@
+@startuml 課題2-1
+left to right direction
+actor 申請者 #00ff00;line:lime;line.bold;
+actor 承認者 #8a2be2;line:BlueViolet;line.bold;
+actor 経理担当者 #00bfff;line:DeepSkyBlue;line.bold;
+actor 交通費生産システム #ff8c00;line:Darkorange;line.bold;
+rectangle  出張申請システム {
+usecase 出張申請を登録する <<登録>> #708090
+usecase 出張申請を提出する <<提出>> #708090
+usecase 出張申請を承認する <<承認>> #708090
+usecase 出張申請を却下する <<却下>> #708090
+usecase 出張申請を差し戻す <<差し戻し>> #708090
+usecase 出張申請を確認する <<確認>> #708090
+}
+申請者 --> 出張申請を登録する
+申請者 --> 出張申請を提出する
+承認者 --> 出張申請を承認する
+承認者 --> 出張申請を却下する
+承認者 --> 出張申請を差し戻す
+承認者 --> 出張申請を確認する
+経理担当者 --> 出張申請を確認する
+出張申請を登録する <-- 交通費生産システム
+@enduml
