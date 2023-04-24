@@ -1,0 +1,59 @@
+@startuml 例1
+skinparam classAttributeIconSize 0
+class 空車リスト {
+    - 日付:date
+---
+    + 希望日付の空いている車一覧(date):void
+    + 当日の空いている車一覧():void
+}
+class 車 {
+    - 車体番号:String
+    - 車種:String
+    - 駆動方式:String
+    - 貸出料金:int
+---
+    + setId(車体番号:String):void
+    + getId():String
+    + setName(氏名: String):void
+    + getName():String
+    + setDriving(駆動方式:String):void
+    + getDriving():String
+    + setPrice(貸出料金:String):void
+    + getPrice():String
+}
+class 顧客 {
+    - 顧客ID:String
+    - 氏名:String
+    - 電話番号:String
+    - 郵便番号:String
+    - 住所:String
+---
+    + setName(氏名:String):void
+    + getName():String
+    + setTel(電話番号:String):void
+    + getTel():String
+    + setNumber_Address(郵便番号:String):void
+    + getNumber_Address():String
+    + setAddress(住所:String):void
+    + getAddress():String
+}
+class 予約 {
+    - 予約番号:int
+    - 顧客番号:int
+    - 車番号:String
+    - 日付:date
+---
+}
+class 貸出 {
+    - 予約番号:int
+    - 顧客番号:int
+    - 車番号:String
+    - 日付:date
+---
+} 
+hide 空車リスト circle
+hide 車 circle
+hide 顧客 circle
+hide 予約 circle
+hide 貸出 circle
+@enduml
