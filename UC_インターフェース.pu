@@ -1,0 +1,20 @@
+@startuml UC_インターフェース
+class Word {
+---
++ enter():void
+}
+class Excel {
+---
++ enter():void
+}
+interface keyboard {
+' <<interface>>
+---
++ enter():void
+}
+keyboard <|.. Word
+keyboard <|.. Excel
+class User {
+}
+keyboard <-up- User:<< use >>
+@enduml
