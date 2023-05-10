@@ -1,4 +1,5 @@
 @startuml 演習3-7
+left to right direction
 object 顧客1{
 名前 = "高田理恵"
 住所 = "岩手県盛岡市中央通"
