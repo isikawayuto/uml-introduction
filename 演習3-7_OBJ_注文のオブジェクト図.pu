@@ -1,39 +1,36 @@
 @startuml 演習3-7
-left to right direction
-object "<u>高橋洋平:重要顧客</u>" as customer1 {
-
+object 顧客1{
+名前 = "高田理恵"
+住所 = "岩手県盛岡市中央通"
+顧客タイプ = "一般顧客"
 }
-object "<u>冷蔵庫:商品</u>" as product1 {
-    型式=R8765
+object 顧客2{
+名前 = "高橋洋平"
+住所 = "岩手県盛岡市中央通"
+顧客タイプ = "重要顧客"
 }
-object "<u>注文情報1:注文</u>" as order1 {
-    注文日=11月21日
-    注文数=3
+object 注文1{
+注文日 = 11月21日
+注文数 = 1
 }
-object "<u>テレビ:商品</u>" as product2 {
-    型式=V12345
+object 注文2{
+注文日 = 11月21日
+注文数 = 2
 }
-
-object "<u>髙田理恵:顧客</u>" as customer2 {
-    
+object 注文3{
+注文日 = 12月23日
+注文数 = 1
 }
-object "<u>注文情報2:注文</u>" as order2 {
-    注文日=12月23日
-    注文数=1
+object テレビ{
+型式 = "V12345"
 }
-object "<u>大坪直之:顧客</u>" as customer3 {
-    
+object 冷蔵庫{
+型式 = "R8765"
 }
-object "<u>プロジェクタ:商品</u>" as product3 {
-    型式=P1122
-}
-
-customer1 -- order1
-order1 -- product1
-order1 -- product2
-
-customer2 -- order2
-order2 -- product1
-
-
+顧客2 --- 注文1 :注文
+顧客2 --- 注文2 :注文
+顧客1 --- 注文3 :注文
+注文1 --- 冷蔵庫
+注文2 --- テレビ
+注文3 --- 冷蔵庫
 @enduml
