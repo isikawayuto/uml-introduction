@@ -1,5 +1,4 @@
 @startuml 演習3-6
-left to right direction
     object "<u>資格リスト:資格</u>" as quadrilateral{
         名称
     }
