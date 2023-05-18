@@ -5,7 +5,7 @@ actor 承認者 #8a2be2;line:BlueViolet;line.bold;
 actor 経理担当者 #00bfff;line:DeepSkyBlue;line.bold;
 actor 交通費生産システム #ff8c00;line:Darkorange;line.bold;
 rectangle  出張申請システム {
-usecase 出張申請を登録する <<登録>> #708090
+usecase メニュー画面に遷移する #708090
 usecase 出張申請を提出する <<提出>> #708090
 usecase 出張申請を承認する <<承認>> #708090
 usecase 出張申請を却下する <<却下>> #708090
