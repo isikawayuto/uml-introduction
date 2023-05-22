@@ -1,0 +1,14 @@
+@startuml 演習6-2
+state 部屋 {
+state entry <<entryPoint>>
+state exit <<exitPoint>>
+entry -> 空室
+空室 --> 予約済み
+予約済み -> 空室 : 予約取り消し
+予約済み -right-> 使用中
+使用中 --> 空室
+空室 -right-> exit
+}
+[*] --> entry
+exit -> [*]
+@enduml
