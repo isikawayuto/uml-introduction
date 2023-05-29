@@ -1,0 +1,24 @@
+@startuml カレーライス
+title カレーの作り方
+start
+:材料用意する;
+fork
+    :ご飯を洗う;
+    :ごはんを炊く;
+fork again
+    fork
+        :野菜を切る;
+        :野菜炒める;
+    fork again
+        :肉を切る;
+        :肉を炒める;
+    endfork
+    :水を入れる;
+    :ちょっと煮る;
+    :カレールー入れる;
+    :ちょっと煮る;
+endfork
+:ご飯盛る;
+:カレー盛る;
+stop
+@enduml
