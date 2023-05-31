@@ -1,0 +1,9 @@
+@startuml 演習6-5-2
+actor ユーザー #00ff00;line:lime;line.bold;
+actor 光センサ #0000ff;line:blue;line.bold;
+rectangle ライントレーサー{
+    usecase ライン右境界線上を進む
+}
+ユーザー -right-> ライン右境界線上を進む
+光センサ -left-> ライン右境界線上を進む
+@enduml
